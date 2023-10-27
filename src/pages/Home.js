@@ -6,7 +6,10 @@ import { AlertBanner } from "../components/AlertBanner";
 export const Home = () => {
   return (
     <div>
-      <Banner />
+      <Banner
+        title="Welcome to GitHub Logger"
+        subTitle="Track your favourite GitHub repositories at the palm of your hand!"
+      />
       <SearchForm />
       <Repos />
       <AlertBanner />
