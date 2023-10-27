@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import Stack from "react-bootstrap/Stack";
 import Spinner from "react-bootstrap/Spinner";
 import { Banner } from "../components/Banner";
 import { SearchForm } from "../components/SearchForm";
 import { Repos } from "../components/Repos";
 import { AlertBanner } from "../components/AlertBanner";
-import axios from "axios";
 
 export const Home = () => {
   const [url, setUrl] = useState("");
