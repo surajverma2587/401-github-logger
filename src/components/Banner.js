@@ -1,8 +1,8 @@
 export const Banner = ({ title, subTitle }) => {
   return (
-    <div class="jumbotron">
-      <h1 class="display-4">{title}</h1>
-      <h2 class="lead">{subTitle}</h2>
+    <div className="jumbotron">
+      <h1 className="display-4">{title}</h1>
+      <h2 className="lead">{subTitle}</h2>
     </div>
   );
 };

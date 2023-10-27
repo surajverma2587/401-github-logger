@@ -1,3 +1,4 @@
+import Stack from "react-bootstrap/Stack";
 import { Banner } from "../components/Banner";
 import { SearchForm } from "../components/SearchForm";
 import { Repos } from "../components/Repos";
@@ -5,7 +6,7 @@ import { AlertBanner } from "../components/AlertBanner";
 
 export const Home = () => {
   return (
-    <div>
+    <Stack gap={3}>
       <Banner
         title="Welcome to GitHub Logger"
         subTitle="Track your favourite GitHub repositories at the palm of your hand!"
@@ -13,6 +14,6 @@ export const Home = () => {
       <SearchForm />
       <Repos />
       <AlertBanner />
-    </div>
+    </Stack>
   );
 };
