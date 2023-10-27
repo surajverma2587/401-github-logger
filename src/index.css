@@ -7,3 +7,16 @@
 .repo-card {
   width: 18rem;
 }
+
+.error-img {
+  text-align: center;
+  max-width: 20rem;
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (max-width: 576px) {
+  .error-img {
+    /* width: 75%; */
+  }
+}

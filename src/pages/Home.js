@@ -10,7 +10,7 @@ export const Home = () => {
   const [url, setUrl] = useState("");
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(true);
 
   useEffect(() => {
     if (url) {
@@ -50,7 +50,12 @@ export const Home = () => {
       />
       <SearchForm onSuccess={onSuccess} />
       {data && <Repos />}
-      {error && <AlertBanner />}
+      {error && (
+        <AlertBanner
+          message="Something went wrong. Please try again!"
+          variant="danger"
+        />
+      )}
     </Stack>
   );
 };
