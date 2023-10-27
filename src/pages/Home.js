@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Stack from "react-bootstrap/Stack";
+import Spinner from "react-bootstrap/Spinner";
 import { Banner } from "../components/Banner";
 import { SearchForm } from "../components/SearchForm";
 import { Repos } from "../components/Repos";
@@ -10,13 +11,14 @@ export const Home = () => {
   const [url, setUrl] = useState("");
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (url) {
       const fetchData = async () => {
         try {
           setIsLoading(true);
+          setData();
 
           const response = await axios.get(url);
 
@@ -46,9 +48,14 @@ export const Home = () => {
     <Stack gap={3}>
       <Banner
         title="Welcome to GitHub Logger"
-        subTitle="Track your favourite GitHub repositories at the palm of your hand!"
+        subTitle="Track your favourite GitHub repositories at thße palm of your hand!"
       />
       <SearchForm onSuccess={onSuccess} />
+      {isLoading && (
+        <Stack direction="horizontal" className="justify-content-center">
+          <Spinner animation="border" />
+        </Stack>
+      )}
       {data && <Repos />}
       {error && (
         <AlertBanner
