@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-export const SearchForm = () => {
+export const SearchForm = ({ onSuccess }) => {
   const [username, setUsername] = useState("");
   const [usernameError, setUsernameError] = useState(false);
 
@@ -18,6 +18,8 @@ export const SearchForm = () => {
     } else {
       setUsernameError(false);
       setUsername("");
+
+      onSuccess(username);
     }
   };
 
