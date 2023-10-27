@@ -48,7 +48,7 @@ export const Home = () => {
     <Stack gap={3}>
       <Banner
         title="Welcome to GitHub Logger"
-        subTitle="Track your favourite GitHub repositories at thße palm of your hand!"
+        subTitle="Track your favourite GitHub repositories at the palm of your hand!"
       />
       <SearchForm onSuccess={onSuccess} />
       {isLoading && (
