@@ -56,7 +56,7 @@ export const Home = () => {
           <Spinner animation="border" />
         </Stack>
       )}
-      {data && <Repos />}
+      {data && <Repos repos={data} />}
       {error && (
         <AlertBanner
           message="Something went wrong. Please try again!"
